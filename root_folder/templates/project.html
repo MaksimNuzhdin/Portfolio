@@ -1,0 +1,45 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block content%}
+
+
+<div class="wrap-body">
+<!--------------Header--------------->
+
+
+<!--------------Content--------------->
+<section class="container">
+	<div id="main-content" class="wrap-container">
+		<div class="zerogrid">
+			<article>
+				<div class="art-header">
+					<h1>{{project_class.art_title}}</h1>
+					<h4>{{project_class.sub_title}}</h4>
+					<img src="{{project_class.art_image.url}}">
+					
+				</div>
+				<div class="art-content">
+					<p><strong>Link to site: </strong><a href="{{project_class.link_to_site}}">{{project_class.link_to_site}}</a></p>
+					<p><strong>link to GitHub: </strong><a href="{{project_class.link_to_github}}">{{project_class.link_to_github}}</a></p>
+					{%for paragraph in paragraph_list %}
+					<p>{{paragraph}}</p>
+					{%endfor%}
+					<table>
+						{%for photo in photo_list%}
+						<img src="{{photo.photo_img.url}}">
+						
+						{%endfor%}
+					</table>
+				 </div>
+			</article>
+		</div>
+	</div>
+</section>
+<!--------------Footer--------------->
+
+
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/navigation.js"></script>
+
+{%endblock%}

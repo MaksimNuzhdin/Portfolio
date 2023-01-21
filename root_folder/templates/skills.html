@@ -1,0 +1,43 @@
+{%load static%}
+<!-----------------content-box-4-------------------->
+
+<div class="content-box box-4"><a name="box-4"></a>
+    <div class="zerogrid">
+        <div class="row wrap-box">
+            <center>
+                <div class="header">
+                    <h2>My key skills</h2>
+                    <h3></h3>
+                </div>
+            </center>
+            <div class="row post">
+                
+                {%for skills in skills_list%}
+                
+                <div class="col-1-3">
+                    <div class="wrap-col">
+                        <div class="pricing">
+                            
+                            <div class="pricing-title">{{skills.skill_name}}</div>
+                            <center><a href="{{skills.skill_photo.url}}"><img src="{{skills.skill_photo.url}}"></a></center>
+                            <ul class="pricing-features">
+                                <li>{{skills.skill_disc}}</li>
+                                <li><strong>Competencies:</strong></li>
+                               
+                                
+                                    
+                                <li><strong>{{skills.skill_comp}}</strong></li>
+                                    
+                                
+                                
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+                
+            </div>
+        </div>
+    </div>
+</div>

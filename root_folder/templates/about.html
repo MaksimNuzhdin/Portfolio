@@ -1,0 +1,55 @@
+{%load static%}
+<!-----------------content-box-1-------------------->
+<div class="content-box box-1"><a name="box-1"></a>
+    <div class="zerogrid">
+        <div class="wrap-box">
+            <div class="col-1-2">
+                <div class="wrap-col">
+                    <div class="row">
+                        {%for img in dics_list%}
+                        <img src="{{img.dics_image.url}}">
+                        {%endfor%}
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-2">
+                <div class="wrap-col">
+                    <div class="row">
+                        <div class="header">
+                            <h2>About me</h2>
+                            <h3>My name's Maksim <br>I'am Python Developer</h3>
+                        </div>
+                        {%for text in dics_list%}
+                        <p>{{text.disc}}</p>
+                        {%endfor%}
+                        <p>My contacts:</p>
+                        <p>Phone: +972 533 868 358</p>
+                        <p>e-mail: Nuzhdin05@gmail.com</p>
+                        <h3>My links:</h3>
+                        <table>
+                            {%for i in nw_list%}							
+                            <tr>									
+                                <th><p><br>{{i.nw_name}}</p></th>
+                                <th><a href="{{i.nw_link}}"><img src="{{i.nw_image.url}}" title="{{i.nw_name}}"/></a></th>	
+                                
+                                
+                                								
+                            </tr>
+                            {%endfor%}	
+                            {%for r in resume_list%}
+                            <tr>
+                                <th><p><br>My resume in {{r.resume_language}}</p></th>
+                                <th><a href="{{r.resume_file.url}}"><img src='{{r.resume_img.url}}'></a></th>	 
+                            </tr>
+                            
+                            {%endfor%}
+                        </table>
+                        <a class="button button03" href="#box-6">Contact me</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

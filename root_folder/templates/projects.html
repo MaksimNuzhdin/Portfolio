@@ -1,0 +1,35 @@
+{%load static%}
+<div class="content-box box-5"><a name="box-5"></a>
+    <div class="zerogrid">
+        <div class="row wrap-box">
+            <center>
+                <div class="header">
+                    <h2>Projects</h2>
+                    <h3>My projects done</h3>
+                </div>
+            </center>
+            {%for i in article_list%}
+            <div class="row">
+                <div class="post">
+                    
+                    <div class="col-1-2 f-right">
+                        <a href="{%url 'project_url' i.id%}"><img src="{{i.art_image.url}}"/></a>
+                    </div>
+                    
+                    <div class="col-1-2">
+                        <div class="art-content">
+                            <h2><a href="{%url 'project_url' i.id%}">{{i.art_title}}</a></h2>
+                            <p>{{i.art_short_disc}}</p>
+                            <a class="button button03" href="{%url 'project_url' i.id%}">Read More</a>
+                            
+                        </div>	
+                        
+                    </div>
+                    
+                </div>						
+                <div class="clear"></div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>

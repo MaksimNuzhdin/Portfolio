@@ -1,0 +1,24 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block index%}
+
+
+<!--------------Content--------------->
+<section class="container">
+	<div class="wrap-container">
+		{%include 'about.html'%}
+		{%include 'education.html'%}
+		
+
+		<!-----------------content-box-5-------------------->
+		{%include 'projects.html'%}
+		{%include 'skills.html'%}
+		<!-----------------content-box-6-------------------->
+		{%include 'form.html'%}
+		
+
+		
+	</div>
+</section>
+<!--------------Footer--------------->
+{%endblock%}
